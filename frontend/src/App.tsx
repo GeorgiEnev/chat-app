@@ -1,9 +1,8 @@
-function App() {
+export default function App() {
   return (
-    <div>
-      <h1>Chat App</h1>
+    <div className="min-h-screen bg-zinc-900 text-white flex items-center justify-center">
+      <h1 className="text-4xl font-bold">Chat App</h1>
     </div>
   );
 }
 
-export default App;
