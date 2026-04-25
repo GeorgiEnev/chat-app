@@ -3,6 +3,7 @@ import { Link } from "react-router";
 
 import AuthCard from "../components/AuthCard";
 import InputField from "../components/InputField";
+import PrimaryButton from "../components/PrimaryButton.tsx";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -36,13 +37,8 @@ export default function LoginPage() {
           onChange={setPassword}
         />
 
-        <button
-          type="submit"
-          className="mt-2 w-full rounded-xl bg-white px-4 py-3 font-semibold text-black transition hover:opacity-90"
-        >
-          Login
-        </button>
-
+        <PrimaryButton type="submit">Login</PrimaryButton>
+      
         <p className="mt-4 text-center text-sm text-zinc-400">
           Don&apos;t have an account?{" "}
           <Link to="/register" className="text-white hover:underline">
