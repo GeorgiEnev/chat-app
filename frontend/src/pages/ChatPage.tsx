@@ -1,4 +1,7 @@
+import ChatHeader from "../components/ChatHeader.tsx";
 import ChatSidebar from "../components/ChatSidebar.tsx";
+import MessageInput from "../components/MessageInput.tsx";
+import MessageList from "../components/MessageList.tsx";
 
 export default function ChatPage() {
   return (
@@ -6,39 +9,11 @@ export default function ChatPage() {
       <ChatSidebar />
 
       <main className="flex flex-col">
-        <header className="border-b border-zinc-800 p-4">
-          <h2 className="font-semibold">John Doe</h2>
-        </header>
+        <ChatHeader />
 
-        <div className="flex-1 overflow-y-auto p-4 space-y-2">
-          <div className="flex flex-col space-y-2">
-            <div className="self-start rounded-lg bg-zinc-800 px-4 py-2">
-              Hello!
-            </div>
+        <MessageList />
 
-            <div className="self-end rounded-lg bg-white px-4 py-2 text-black">
-              Hi, how are you?
-            </div>
-
-            <div className="self-start rounded-lg bg-zinc-800 px-4 py-2">
-              I'm good, thanks!
-            </div>
-          </div>
-        </div>
-        
-        <div className="border-t border-zinc-800 p-4">
-          <div className="flex items-center gap-2">
-            <input
-              type="text"
-              placeholder="Type a message..."
-              className="flex-1 rounded-lg bg-zinc-800 px-4 py-2 outline-none"
-            />
-
-            <button className="rounded-lg bg-white px-4 py-2 font-semibold text-black">
-              Send
-            </button>
-          </div>
-        </div>
+        <MessageInput />
       </main>
     </div>
   );
