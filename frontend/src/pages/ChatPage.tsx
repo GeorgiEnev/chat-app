@@ -1,4 +1,9 @@
 export default function ChatPage() {
-  return <h1 className="text-white text-3xl">Chat Page</h1>;
-}
+  return (
+    <div className="h-screen grid grid-cols-[320px_1fr] bg-zinc-950 text-white">
+      <aside className="border-r border-zinc-800">Sidebar</aside>
 
+      <main>Main Chat Area</main>
+    </div>
+  );
+}
